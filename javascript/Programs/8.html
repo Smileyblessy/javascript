@@ -1,0 +1,29 @@
+<!-- to add colors to all h1 tags when the button is clicked -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>HELLO WORLD</h1>
+    <h1>YOU CAN DO IT</h1>
+    <h1>TRUST YOURSELF</h1>
+    <h1>DONT BE SAD</h1>
+    <h1>BE HAPPY</h1>
+    <button class="btn btn-info ms-5" onclick="changecolors()">CLICK HERE</button>
+    <script>
+        function changecolors(){
+           var arr=["blue","red","maroon","orange","violet"]
+           var newarr=document.getElementsByTagName("h1")
+           for(let i=0;i<newarr.length;i++)
+           {
+            newarr[i].style.color=arr[i]
+           }
+        }
+    </script>
+</body>
+</html>

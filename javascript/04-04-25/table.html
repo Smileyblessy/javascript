@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+   <div id="table-container"> </div> 
+   <script>
+    let table="<table class='table table-bordered'>"
+    table+="<tr><th> S.No</th><th> Name</th><th> Price</th><th>Image</th><th>Action</th></tr>"
+    function getData()
+    {
+        fetch('https://fakestoreapi.com/products')
+        .then((result)=>result. json())
+        .then((data)=>{
+            data.forEach((product)=>
+            {
+                table+=`<tr><td>${product.id}</td><td>${product.title}</td><td>${product.price}</td><td> <img src="${product.image}" height="200" width="200"></td> <td><button class="btn btn-success">BUY NOW</button></td></tr>`
+                   
+            })
+        table+="</table>";
+        document.getElementById("table-container").innerHTML=table;
+        })
+    }
+    getData();
+   </script>
+</body>
+</html>

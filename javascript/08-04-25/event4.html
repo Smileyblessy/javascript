@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="mufun()" onoffline="lostnetwork()" ononline="gotnetwork()">
+<h1 id="myh1"></h1>
+<h1>Hello World</h1>
+<script>
+    function lostnetwork()
+    {
+        document.getElementById("myh1").innerHTML="lost network connection";
+        document.getElementById("myh1").style.color="red"
+    }
+    function gotnetwork()
+    {
+        document.getElementById("myh1").innerHTML="network connected";
+        document.getElementById("myh1").style.color="green"
+    }
+    function my()
+    {
+        alret("Welcome to DRF")
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-6">
+                <img src="bank.jpg"  alt="" width="500" height="500">
+            </div>
+            <div class="col-md-6 mt-5">
+            <h1>FIXED DEPOSIT CALCULATOR</h1><br>
+            <div class="form-group">
+                <label for="" class="form-label">NAME:</label>
+                <input type="text" name="" id="uname" placeholder="Enter Your Name" class="form-control">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="" class="form-label">AGE:</label>
+                <input type="text p-1" name="" id="age" placeholder="Enter Your Age" class="form-control">
+            </div>
+            <br>
+            <div class="form-group ">
+                <label for="" class="form-label">AMOUNT:</label>
+                <input type="text" name="" id="amount" placeholder="Enter Amount" class="form-control">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="" class="form-label">TENURE:</label>                
+                <select class=""  id="tenure">
+                    <option value="1">1-Year</option>
+                    <option value="2">2-Year</option>
+                    <option value="3">3-Year</option>
+                    <option value="4">4-Year</option>
+                    <option value="5">5-Year</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit" onclick="Accessbtn()">CHECK</button>
+                <button class="btn btn-danger" type="reset" onclick="NotAccess">CANCEL</button>
+                <h5 class="print">Your Maturity amount is</h5>
+               
+            </div>
+            <div id="result">
+
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        function Accessbtn(){
+            var uname=document.getElementById("uname").value;
+            var age=document.getElementById("age").value;
+            var amount=document.getElementById("amount").value;
+            var tenure=document.getElementById("tenure").value;
+            if(age<60)
+            {
+                let si=(parseInt(amount)*parseInt(tenure)*7)/100;
+                let total=si+parseInt(amount)
+                document.getElementById("result").innerHTML=`hey ${uname} maturity is ${total}`
+            }
+
+        }
+    </script>
+</body>
+</html>

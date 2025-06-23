@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body onresize="resized()">
+    <div class="container">
+        <div class="col-md-9"></div>
+        <div class="col-md-2 mt-5">
+    <button class="btn btn-primary"id="mybtn">CLICK ME</button>
+    <script>
+        document.getElementById("mybtn").addEventListener('click',()=>{alert ("Button Clicked")})
+        function resized()
+        {
+            alret("window resized");
+        }
+    </script>
+    </div>
+    </div>
+</body>
+</html>

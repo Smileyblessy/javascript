@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myid"></h1>
+    <button onclick="runtimer()">START</button>
+    <button onclick="stoptimer()">STOP</button>
+    <script>
+        let mins=0,sec=0,hours=0;
+        var a;
+        function stopwatch()
+        {
+            sec++;
+            if(sec==60)
+            {
+                mins++;
+                sec=0;
+            }
+            if(mins==60)
+            {
+                hours++;
+                sec=0;
+                mins=0;
+            }
+        }
+        document.getElementById("myid").innerHTML=`${hours.toString().padStart(2,"0")}h:${mins.toString().padStart(2,"0")}m:${sec.toString().padStart(2,"0")}s `;
+        function runtimer()
+        {
+            a=setInterval(stopwatch,1000)
+        }
+        function stoptimer()
+        {
+            clearInterval(a);
+        }
+        
+    </script>
+</body>
+</html>

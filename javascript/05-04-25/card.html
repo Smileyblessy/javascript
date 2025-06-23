@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="card-container">
+
+    </div>
+    <script>
+        let cards=""
+        cards+=`<div class="row  pt-3 ps-5 pe-5">`
+        function getData(){
+            fetch('https://jsonplaceholder.typicode.com/posts')
+            .then((result)=>result.json())
+            .then((data)=>{
+                data.forEach((product)=>
+                {
+                    cards+=`<div class="col-md-3">`
+                    cards+=`<div class="card h-200 w-200">`
+                    cards+=`<div class="card-title">${product.id}</div><div class="card-title">${product.title}</div><div class="card-title">${product.body}</div>`
+                    cards+="</div></div>"
+                })
+                cards+="</div>"
+                document.getElementById("card-container").innerHTML=cards;
+            })
+        }
+        getData();
+    </script>
+</body>
+</html>

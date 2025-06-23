@@ -1,0 +1,39 @@
+<!-- to print incremental value every time when button is clicked -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 id="myh1">increment Value When Click The Button</h1>
+            <div class="col-md-2"></div>
+            <div class="ccol-md-5">
+                <button class="btn btn-success" id="btn" onclick="increment()">Click Here</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="ccol-md-5">
+                    <label for="" id="result"></label>
+                </div>
+            </div>
+    </div>
+    <script>
+        let a=7;
+        function increment(){
+            a++;
+        }    
+        document.getElementById("result").innerHTML="the value is " +a;
+        document.getElementById("result").style.color="blue";
+    </script>
+    </div>
+</body>
+</html>

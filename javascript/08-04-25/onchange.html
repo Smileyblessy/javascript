@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Select Your City :</label>
+    <select name="" id="city" onchange="citychanged()">
+        <option value="Hyd">HYD</option>
+        <option value="Vij">VIJ</option>
+        <option value="Kerela">KERELA</option>
+        <option value="Goa">GOA</option>
+    </select>
+    <br>
+    <button id="mybtn">CLICK ME</button>
+    <br>
+    <label for="" id="result"></label>
+    <script>
+        function citychanged()
+        {
+            var city=document.getElementById("city").value;
+            document.getElementById("result").innerHTML=`you selected ${city}`
+        }
+    </script>
+</body>
+</html>
